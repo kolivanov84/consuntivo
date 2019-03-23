@@ -21,13 +21,32 @@
 		       Password:<br />
 		       <input type="password" id="password" /><br />
 		   </form>
-		   <button id="submit">SUBMIT</button>
+		   <button id="submit">LOGIN</button>
+		</div>
+		
+		<div id="register_section">
+		   <h2><b>Register</b></h2>
+		   <hr align=”left” size=”1″ width=”300″ noshade/>
+		   <form>
+		   	   Nome:<br />
+		       <input type="text" id="nome" /><br />
+		       Cognome:<br />
+		       <input type="text" id="cognome" /><br />
+		       Email:<br />
+		       <input type="text" id="email" /><br />
+		       Username:<br />
+		       <input type="text" id="username" /><br />
+		       Password:<br />
+		       <input type="password" id="password" /><br />
+		   </form>
+		   <button id="submit">REGISTER</button>
 		</div>
 	</body>
 	
 	<script>
 	    $(document).ready(function(){
-	           $("#login_section").show();         /* it shows the sign in and hide the operation sections */
+	           $("#login_section").show();     
+	           $("#register_section").show();     /* it shows the sign in and hide the operation sections */
 	           ChangeUrl("Login","/login.html");  /* it sets the new url when the page is loaded */
 	    });
 	</script>
