@@ -6,10 +6,12 @@ import java.util.Map;
 import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.transaction.Transactional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import it.garbi.consuntivo.dao.UserDao;
 import it.garbi.consuntivo.entities.User;
@@ -17,6 +19,8 @@ import it.garbi.consuntivo.utils.EncryptionUtils;
 import it.garbi.consuntivo.utils.JwtUtils;
 import it.garbi.consuntivo.utils.UserNotLoggedException;
 
+
+@Service @Transactional
 public class UserServiceImpl implements UserService{
 	
 private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
