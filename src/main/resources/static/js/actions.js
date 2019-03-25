@@ -1,6 +1,6 @@
 $(document).ready(function(){
        $("#login_section").show();     
-       $("#register_section").show();     
+       $("#register_section").hide();     
        ChangeUrl("Login","/login.html");  
 });
 
