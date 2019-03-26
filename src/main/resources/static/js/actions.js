@@ -4,7 +4,15 @@ $(document).ready(function(){
        ChangeUrl("Login","/login.html");  
 });
 
+$("#registerLink").click(function(e) {
+	$("#login_section").hide();     
+    $("#register_section").show(); 
+});
 
+$("#loginLink").click(function(e) {
+	$("#login_section").show();     
+    $("#register_section").hide(); 
+});
 
 /* registrazione nuovo utente */
 $("#register").click(function(e) {
@@ -15,11 +23,11 @@ $("#register").click(function(e) {
           url: 'http://localhost:8094/user/add',                  
           type: "POST",
           data: {
-        	 nome:          $("#nome").val(),                        
-        	 cognome:       $("#cognome").val(),
-             email: 		$("#email").val(),
-             user:  		$("#user").val(),
-             pwd:  			$("#pwd").val()
+        	 		nome:          	$("#nome").val(),                        
+        	 		cognome:       	$("#cognome").val(),
+             	email: 			$("#email").val(),
+             	username:  			$("#user").val(),
+             	password:  			$("#pwd").val()
           },
           success: function (data, status, xhr) {
              alert("Success!");

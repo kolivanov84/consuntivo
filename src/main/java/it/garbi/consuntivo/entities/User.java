@@ -9,10 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.NotBlank;
-
-import org.hibernate.validator.constraints.NotEmpty;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 import it.garbi.consuntivo.utils.Permission;
 import lombok.AllArgsConstructor;
@@ -29,7 +27,7 @@ public class User {
 	@Id
 	@Column(name="id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@NotEmpty @NotBlank @NotNull
+	@NotBlank @NotNull
 	private Integer id;
 	
 	@Getter @Setter

@@ -35,7 +35,7 @@
 		            <small class="form-text text-muted">
 			            Oppure
 		         	</small>
-		            <a href="#"><small>Registrati</small>
+		            <a id="registerLink" href="#"><small>Registrati</small>
 		          </div>
 		        </div>
 		      </div>
@@ -43,21 +43,40 @@
 		</div>
 		
 		<div id="register_section">
-		   <h2><b>Register</b></h2>
-		   <hr align=”left” size=”1″ width=”300″ noshade/>
-		   <form>
-		   	   Nome:<br />
-		       <input type="text" id="nome" /><br />
-		       Cognome:<br />
-		       <input type="text" id="cognome" /><br />
-		       Email:<br />
-		       <input type="text" id="email" /><br />
-		       Username:<br />
-		       <input type="text" id="user" /><br />
-		       Password:<br />
-		       <input type="password" id="pwd" /><br />
-		   </form>
-		   <button id="register">REGISTER</button>
+			<div class="adminx-container d-flex justify-content-center align-items-center">
+		      <div class="page-login">
+		        <div class="card mb-0">
+		          <div class="card-body">
+		            <form>
+		              <div class="form-group">
+		                <label for="exampleDropdownFormEmail1" class="form-label">Nome</label>
+		                <input type="text" class="form-control" id="nome" placeholder="Nome">
+		              </div>
+		              <div class="form-group">
+		                <label for="exampleDropdownFormPassword1" class="form-label">Cognome</label>
+		                <input type="text" class="form-control" id="cognome" placeholder="Cognome">
+		              </div>
+		              <div class="form-group">
+		                <label for="exampleDropdownFormPassword1" class="form-label">Email</label>
+		                <input type="text" class="form-control" id="email" placeholder="Email">
+		              </div>
+		              <div class="form-group">
+		                <label for="exampleDropdownFormPassword1" class="form-label">Username</label>
+		                <input type="text" class="form-control" id="user" placeholder="Username">
+		              </div>
+		              <div class="form-group">
+		                <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+		                <input type="password" class="form-control" id="pwd" placeholder="Password">
+		              </div>
+		              <button id="register" class="btn btn-sm btn-block btn-primary">Submit</button>
+		            </form>
+		          </div>
+		          <div class="card-footer text-center">
+		            <a id="loginLink" href="#"><small>Già registrato?</small>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
 		</div>
 	</body>
 	
