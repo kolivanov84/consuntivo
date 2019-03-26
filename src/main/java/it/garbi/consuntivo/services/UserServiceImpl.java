@@ -17,6 +17,7 @@ import it.garbi.consuntivo.dao.UserDao;
 import it.garbi.consuntivo.entities.User;
 import it.garbi.consuntivo.utils.EncryptionUtils;
 import it.garbi.consuntivo.utils.JwtUtils;
+import it.garbi.consuntivo.utils.Permission;
 import it.garbi.consuntivo.utils.UserNotLoggedException;
 
 
@@ -77,8 +78,11 @@ private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class)
 	 * Salvataggio nuovo utente
 	 */
 	@Override
-	public User saveUser(User operation) {
-		return userDao.save(operation);
+	public User saveUser(User user) {
+		user.setPermission(Permission.USER);
+		user.setPassword(encryptionUtils.encrypt(user.getPassword()));
+		return userDao.save(user);
+		//Invio mail
 	}
 
 }

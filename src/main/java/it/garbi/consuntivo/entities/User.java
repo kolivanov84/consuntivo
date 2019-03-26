@@ -26,8 +26,7 @@ public class User {
 	@Getter @Setter
 	@Id
 	@Column(name="id")
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@NotBlank @NotNull
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
 	@Getter @Setter
@@ -56,7 +55,6 @@ public class User {
 	private String cognome;
 	
 	@Column(name="permission")
-	@NotEmpty @NotBlank @NotNull
 	@Getter @Setter
 	@Enumerated(EnumType.STRING)
 	private Permission permission;

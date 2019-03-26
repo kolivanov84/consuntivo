@@ -30,13 +30,10 @@ $("#register").click(function(e) {
              	password:  			$("#pwd").val()
           },
           success: function (data, status, xhr) {
-             alert("Success!");
-//             $("#codeInput").val("");                        
-//             $("#descrInput").val("");
-//             $("#valueInput").val("");
-//             $("#fkAccount1Input").val(e.target.id);
-//             $("#fkAccount2Input").val("");
-//             $("#operations").hide();
+             //alert("Registrazione avvenuta con successo. E'stata inviata una mail con le credenziali di accesso.");
+             alert("Registrazione avvenuta con successo.");
+             $("#login_section").show();     
+		     $("#register_section").hide();
           },
           error: function(result) {
              alert("Error!");

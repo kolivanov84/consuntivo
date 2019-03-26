@@ -1,4 +1,4 @@
-CREATE DATABASE `consuntivo` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE `consuntivo`;
 
 CREATE TABLE `user` (
   `id_utente` int(11) NOT NULL AUTO_INCREMENT,
@@ -9,4 +9,5 @@ CREATE TABLE `user` (
   `cognome` varchar(45) NOT NULL,
   `permission` enum('USER','ADMIN') NOT NULL,
   PRIMARY KEY (`id_utente`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
